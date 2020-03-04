@@ -1,0 +1,6 @@
+module FrostedSidebar {
+  umbrella header "FrostedSidebar-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+# Uncomment this line if you're using Swift
+platform :ios, '12.1'
+use_frameworks!
+
+target 'NPCEO' do
+pod 'PromiseKit', '~> 6.8'
+pod 'TTGTagCollectionView'
+pod 'Firebase/Core'
+pod 'FirebaseUI'
+end
+

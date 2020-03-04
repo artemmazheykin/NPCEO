@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>481041824299-ejdapkv2n9fppkrjn1biuo53m2csmq3v.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.481041824299-ejdapkv2n9fppkrjn1biuo53m2csmq3v</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD58O_ip3TtRGAZ0i_oa6wpt5m5rw0td_c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>481041824299</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Morodin.NPCEO</string>
+	<key>PROJECT_ID</key>
+	<string>npceo-2d0e9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>npceo-2d0e9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:481041824299:ios:8e7cdbaef5d008fe5e086e</string>
+	<key>DATABASE_URL</key>
+	<string>https://npceo-2d0e9.firebaseio.com</string>
+</dict>
+</plist>
