@@ -21,6 +21,7 @@
 		4335864D99E1748F28299E78 /* libPods-NPCEO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2377AE3D296FD51731909942 /* libPods-NPCEO.a */; };
 		ED2E4772240C56A3008A944A /* PopupPhonecallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E4771240C56A3008A944A /* PopupPhonecallViewController.swift */; };
 		ED45FBC22400522800C63446 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED45FBC12400522800C63446 /* MainViewController.swift */; };
+		ED63D94224104BA9007054DB /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63D94124104BA9007054DB /* UserInfoViewController.swift */; };
 		ED8246102402A82900FB9D8A /* internetIcon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = ED82460F2402A82900FB9D8A /* internetIcon.jpeg */; };
 		ED8246122402AF3C00FB9D8A /* Hamburger-Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8246112402AF3C00FB9D8A /* Hamburger-Menu.png */; };
 		ED824614240303C600FB9D8A /* GNVM.JPG in Resources */ = {isa = PBXBuildFile; fileRef = ED824613240303C600FB9D8A /* GNVM.JPG */; };
@@ -74,6 +75,7 @@
 		D1DFBD636215CF5AFE30CA60 /* Pods-NPCEO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPCEO.release.xcconfig"; path = "Target Support Files/Pods-NPCEO/Pods-NPCEO.release.xcconfig"; sourceTree = "<group>"; };
 		ED2E4771240C56A3008A944A /* PopupPhonecallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupPhonecallViewController.swift; sourceTree = "<group>"; };
 		ED45FBC12400522800C63446 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		ED63D94124104BA9007054DB /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		ED82460F2402A82900FB9D8A /* internetIcon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = internetIcon.jpeg; sourceTree = "<group>"; };
 		ED8246112402AF3C00FB9D8A /* Hamburger-Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hamburger-Menu.png"; sourceTree = "<group>"; };
 		ED824613240303C600FB9D8A /* GNVM.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GNVM.JPG; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				ED45FBC12400522800C63446 /* MainViewController.swift */,
 				0480FE34240918BE00595875 /* PopupNewUserViewController.swift */,
 				ED2E4771240C56A3008A944A /* PopupPhonecallViewController.swift */,
+				ED63D94124104BA9007054DB /* UserInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				0480FE35240918BE00595875 /* PopupNewUserViewController.swift in Sources */,
 				045B7779240FCB6E0089DA49 /* Spinners.swift in Sources */,
 				ED2E4772240C56A3008A944A /* PopupPhonecallViewController.swift in Sources */,
+				ED63D94224104BA9007054DB /* UserInfoViewController.swift in Sources */,
 				0432550D240E4A7A00DA21F5 /* BurnerModel.swift in Sources */,
 				EDA579E7240D852C0059D638 /* UserModel.swift in Sources */,
 				043BBFE3240F9CCD00C4A89A /* Alerts.swift in Sources */,
