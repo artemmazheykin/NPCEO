@@ -18,6 +18,7 @@
 		043BBFE3240F9CCD00C4A89A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BBFE2240F9CCD00C4A89A /* Alerts.swift */; };
 		045B7779240FCB6E0089DA49 /* Spinners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B7778240FCB6E0089DA49 /* Spinners.swift */; };
 		0480FE35240918BE00595875 /* PopupNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480FE34240918BE00595875 /* PopupNewUserViewController.swift */; };
+		04C84BEB2411283600A216AB /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84BEA2411283600A216AB /* ProfileTableViewCell.swift */; };
 		4335864D99E1748F28299E78 /* libPods-NPCEO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2377AE3D296FD51731909942 /* libPods-NPCEO.a */; };
 		ED2E4772240C56A3008A944A /* PopupPhonecallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E4771240C56A3008A944A /* PopupPhonecallViewController.swift */; };
 		ED45FBC22400522800C63446 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED45FBC12400522800C63446 /* MainViewController.swift */; };
@@ -70,6 +71,7 @@
 		043BBFE2240F9CCD00C4A89A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		045B7778240FCB6E0089DA49 /* Spinners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinners.swift; sourceTree = "<group>"; };
 		0480FE34240918BE00595875 /* PopupNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupNewUserViewController.swift; sourceTree = "<group>"; };
+		04C84BEA2411283600A216AB /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		2377AE3D296FD51731909942 /* libPods-NPCEO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NPCEO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1FCD9AEE3830FDFAACCA72 /* Pods-NPCEO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPCEO.debug.xcconfig"; path = "Target Support Files/Pods-NPCEO/Pods-NPCEO.debug.xcconfig"; sourceTree = "<group>"; };
 		D1DFBD636215CF5AFE30CA60 /* Pods-NPCEO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPCEO.release.xcconfig"; path = "Target Support Files/Pods-NPCEO/Pods-NPCEO.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		04C84BEC2411283D00A216AB /* UserInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED63D94124104BA9007054DB /* UserInfoViewController.swift */,
+				04C84BEA2411283600A216AB /* ProfileTableViewCell.swift */,
+			);
+			path = UserInfoViewController;
+			sourceTree = "<group>";
+		};
 		A2B9C3FC3641E9308DD85190 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +228,7 @@
 				ED45FBC12400522800C63446 /* MainViewController.swift */,
 				0480FE34240918BE00595875 /* PopupNewUserViewController.swift */,
 				ED2E4771240C56A3008A944A /* PopupPhonecallViewController.swift */,
-				ED63D94124104BA9007054DB /* UserInfoViewController.swift */,
+				04C84BEC2411283D00A216AB /* UserInfoViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -413,6 +424,7 @@
 				ED45FBC22400522800C63446 /* MainViewController.swift in Sources */,
 				0480FE35240918BE00595875 /* PopupNewUserViewController.swift in Sources */,
 				045B7779240FCB6E0089DA49 /* Spinners.swift in Sources */,
+				04C84BEB2411283600A216AB /* ProfileTableViewCell.swift in Sources */,
 				ED2E4772240C56A3008A944A /* PopupPhonecallViewController.swift in Sources */,
 				ED63D94224104BA9007054DB /* UserInfoViewController.swift in Sources */,
 				0432550D240E4A7A00DA21F5 /* BurnerModel.swift in Sources */,

@@ -8,8 +8,11 @@
 
 import UIKit
 
-class UserProfileViewController: UIViewController {
+class UserProfileViewController: UIViewController, UITableViewDelegate {
 
+    @IBOutlet weak var profileTableview: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
