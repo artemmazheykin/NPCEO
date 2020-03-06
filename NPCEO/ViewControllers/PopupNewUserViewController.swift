@@ -150,7 +150,6 @@ class PopupNewUserViewController: UIViewController {
                                 Spinners.spinnerStop(spinner: self.spinner)
                                 return
                             }
-                            print("user name = \(user.displayName)")
                             Alerts.specialAlert(viewcontroller: self, title: "Добро пожаловать, \(self.nameOrganizationTextField.text!)!", message: "Вам осталось подтвердить адрес электронной почты") { _ in
                                 if let mainVC = self.popoverPresentationController?.delegate as? MainViewController{
                                     mainVC.checkState()

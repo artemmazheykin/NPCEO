@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ProfileTableViewCell: UITableViewCell {
+class ProfileTableViewNameOrganizationOrEmailCell: UITableViewCell {
 
+    @IBOutlet weak var nameOrganizationOrEmailTextField: UITextField!
+    
+    @IBOutlet weak var changeButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

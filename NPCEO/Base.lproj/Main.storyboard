@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="df9-2C-r4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="634" y="34"/>
+            <point key="canvasLocation" x="632.79999999999995" y="33.733133433283363"/>
         </scene>
         <!--Popup New User View Controller-->
         <scene sceneID="hr2-tD-ZIH">
@@ -321,21 +321,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pvm-gP-tWr">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pvm-gP-tWr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileTableViewCell" id="KgX-JH-ZcD" customClass="ProfileTableViewCell" customModule="NPCEO" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileTableViewNameOrganizationOrEmailCell" id="KgX-JH-ZcD" customClass="ProfileTableViewNameOrganizationOrEmailCell" customModule="NPCEO" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KgX-JH-ZcD" id="1jC-uF-zNc">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя организации или email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nre-Hv-QtG">
+                                                    <rect key="frame" x="15" y="4.5" width="243" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="iB0-h9-zEm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXb-XL-lLK">
+                                                    <rect key="frame" x="273" y="4.5" width="87" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="ILM-Mh-V66"/>
+                                                        <constraint firstAttribute="width" constant="87" id="vwR-fp-fPE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                    <state key="normal" title="Изменить"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nre-Hv-QtG" secondAttribute="trailing" constant="102" identifier="trailingSpace" id="0sw-ih-wiA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lXb-XL-lLK" secondAttribute="trailing" id="FDE-Zy-aQL"/>
+                                                <constraint firstItem="nre-Hv-QtG" firstAttribute="centerY" secondItem="1jC-uF-zNc" secondAttribute="centerY" id="TeA-80-Aea"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="nre-Hv-QtG" secondAttribute="leading" id="Za7-Mv-tyl"/>
+                                                <constraint firstItem="lXb-XL-lLK" firstAttribute="centerY" secondItem="1jC-uF-zNc" secondAttribute="centerY" id="ozF-mb-REQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="changeButton" destination="lXb-XL-lLK" id="IGl-YV-dyx"/>
+                                            <outlet property="nameOrganizationOrEmailTextField" destination="nre-Hv-QtG" id="9h1-YB-BRl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileTableViewResetPasswordOrExitCell" id="B1d-MI-jOC" customClass="ProfileTableViewResetPasswordOrExitCell" customModule="NPCEO" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="71.5" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B1d-MI-jOC" id="OAQ-It-5TU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r09-ZU-DMa">
+                                                    <rect key="frame" x="87.5" y="7" width="200" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="bVp-1Z-Sym"/>
+                                                        <constraint firstAttribute="width" constant="200" id="qTH-zf-yKA"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Сбросить пароль"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="r09-ZU-DMa" firstAttribute="centerY" secondItem="B1d-MI-jOC" secondAttribute="centerY" id="Sde-7G-E5c"/>
+                                            <constraint firstItem="r09-ZU-DMa" firstAttribute="centerX" secondItem="B1d-MI-jOC" secondAttribute="centerX" id="aqP-8e-f1v"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="resetPasswordOrExitButton" destination="r09-ZU-DMa" id="RUP-ts-6vt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="KWJ-et-b0p">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -348,6 +407,7 @@
                     </view>
                     <connections>
                         <outlet property="profileTableview" destination="pvm-gP-tWr" id="GBc-uI-YJ9"/>
+                        <outlet property="spinner" destination="KWJ-et-b0p" id="pat-Yo-cV1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylJ-iY-NI1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

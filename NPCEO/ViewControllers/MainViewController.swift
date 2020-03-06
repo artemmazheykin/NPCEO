@@ -31,10 +31,8 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
         didSet{
             if isSignInModeActive{
                 signInView.isHidden = false
-                userInformationButton.isEnabled = false
             }else{
                 signInView.isHidden = true
-                userInformationButton.isEnabled = true
             }
         }
     }
@@ -69,7 +67,6 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
             currentUser = UserModel(displayName: user.displayName!, email: user.email!, isEmailVerified: user.isEmailVerified, uid: user.uid)
         }
         checkState()
-        print("currentuser = \(currentUser)")
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -98,30 +95,19 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
         burgerButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         userInformationButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
         userInformationButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
-        if let user = Auth.auth().currentUser{
-            user.reload(completion: nil)
-            
-            print("user is signed in!!!")
-            print("Auth.auth().currentUser.debugDescription = \(Auth.auth().currentUser.debugDescription)")
-            print("Auth.auth().currentUser?.email = \(Auth.auth().currentUser?.email)")
-            print("Auth.auth().currentUser?.isEmailVerified = \(Auth.auth().currentUser?.isEmailVerified)")
-            print("Auth.auth().currentUser?.displayName = \(Auth.auth().currentUser?.displayName)")
-            
-            
-        } else {
-            // No user is signed in.
-            // ...
-        }
     }
 
+    
     func checkState(){
+        emailTextfield.text = ""
+        passwordTextfield.text = ""
         
         Spinners.spinnerStart(spinner: spinner)
         
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             
             if let user = user{
+                self.userInformationButton.isEnabled = true
                 user.reload { (error) in
                     if let error = error{
                         self.navigationItem.title = ""
@@ -141,6 +127,7 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
                     }
                 }
             }else{
+                self.userInformationButton.isEnabled = false
                 self.label.text = "Авторизируйтесь"
                 Spinners.spinnerStop(spinner: self.spinner)
                 self.isSignInModeActive = true
@@ -150,7 +137,7 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        checkState()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -210,7 +197,9 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
     @objc func userInformationButtonDidTapped(_ sender: UIButton) {
         
         print("userInformationButtonDidTapped")
-        
+            let infovc = self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewController")
+            self.navigationController?.pushViewController(infovc, animated: true)
+
     }
 
     @objc func newUserButtonDidTapped(_ sender: UIButton) {
