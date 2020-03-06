@@ -98,7 +98,7 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
     }
 
     
-    func checkState(){
+    func checkState (completion: ((_ currentUser: User) -> Void)? = nil){
         emailTextfield.text = ""
         passwordTextfield.text = ""
         
@@ -120,6 +120,9 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
                         self.label.text = "Здравствуйте, \(self.currentUser.displayName!)."
                         self.isSignInModeActive = false
                         Spinners.spinnerStop(spinner: self.spinner)
+                        if let handler = completion{
+                            handler(user)
+                        }
                     }else{
                         self.label.text = "Подтвердите адрес электронной почты"
                         self.isSignInModeActive = true
