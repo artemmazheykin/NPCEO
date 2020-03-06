@@ -34,6 +34,14 @@
 		ED82461C2404707400FB9D8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8246192404707400FB9D8A /* GoogleService-Info.plist */; };
 		EDA579E2240C5D760059D638 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA579E1240C5D750059D638 /* phone.png */; };
 		EDA579E7240D852C0059D638 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA579E6240D852C0059D638 /* UserModel.swift */; };
+		EDA88F392412C338009D8306 /* ggi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDA88F332412C338009D8306 /* ggi.jpg */; };
+		EDA88F3A2412C338009D8306 /* trubcol.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDA88F342412C338009D8306 /* trubcol.jpg */; };
+		EDA88F3B2412C338009D8306 /* nast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDA88F352412C338009D8306 /* nast.jpg */; };
+		EDA88F3C2412C338009D8306 /* inzh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDA88F362412C338009D8306 /* inzh.jpg */; };
+		EDA88F3D2412C338009D8306 /* dut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDA88F372412C338009D8306 /* dut.jpg */; };
+		EDA88F3E2412C338009D8306 /* gkvd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDA88F382412C338009D8306 /* gkvd.jpg */; };
+		EDA88F402412C5D6009D8306 /* BurnerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA88F3F2412C5D6009D8306 /* BurnerCollectionViewController.swift */; };
+		EDA88F432412C8AC009D8306 /* BurnerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA88F422412C8AC009D8306 /* BurnerCollectionViewCell.swift */; };
 		EDD8D4FF2409B73E00446C7F /* check-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD8D4FE2409B73E00446C7F /* check-mark.png */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +96,14 @@
 		ED8246192404707400FB9D8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDA579E1240C5D750059D638 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
 		EDA579E6240D852C0059D638 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		EDA88F332412C338009D8306 /* ggi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ggi.jpg; sourceTree = "<group>"; };
+		EDA88F342412C338009D8306 /* trubcol.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trubcol.jpg; sourceTree = "<group>"; };
+		EDA88F352412C338009D8306 /* nast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nast.jpg; sourceTree = "<group>"; };
+		EDA88F362412C338009D8306 /* inzh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = inzh.jpg; sourceTree = "<group>"; };
+		EDA88F372412C338009D8306 /* dut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dut.jpg; sourceTree = "<group>"; };
+		EDA88F382412C338009D8306 /* gkvd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gkvd.jpg; sourceTree = "<group>"; };
+		EDA88F3F2412C5D6009D8306 /* BurnerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnerCollectionViewController.swift; sourceTree = "<group>"; };
+		EDA88F422412C8AC009D8306 /* BurnerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnerCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDD8D4FE2409B73E00446C7F /* check-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-mark.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +193,7 @@
 		0404121323FFF70600667F26 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EDA88F322412C338009D8306 /* burners */,
 				0404121423FFF72400667F26 /* Icon-1024.png */,
 				ED82460F2402A82900FB9D8A /* internetIcon.jpeg */,
 				ED8246112402AF3C00FB9D8A /* Hamburger-Menu.png */,
@@ -229,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				ED45FBC12400522800C63446 /* MainViewController.swift */,
+				EDA88F412412C883009D8306 /* BurnerCollectionViewController */,
 				0480FE34240918BE00595875 /* PopupNewUserViewController.swift */,
 				ED2E4771240C56A3008A944A /* PopupPhonecallViewController.swift */,
 				04C84BEC2411283D00A216AB /* UserInfoViewController */,
@@ -251,6 +269,28 @@
 				0432550C240E4A7A00DA21F5 /* BurnerModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EDA88F322412C338009D8306 /* burners */ = {
+			isa = PBXGroup;
+			children = (
+				EDA88F332412C338009D8306 /* ggi.jpg */,
+				EDA88F342412C338009D8306 /* trubcol.jpg */,
+				EDA88F352412C338009D8306 /* nast.jpg */,
+				EDA88F362412C338009D8306 /* inzh.jpg */,
+				EDA88F372412C338009D8306 /* dut.jpg */,
+				EDA88F382412C338009D8306 /* gkvd.jpg */,
+			);
+			path = burners;
+			sourceTree = "<group>";
+		};
+		EDA88F412412C883009D8306 /* BurnerCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EDA88F3F2412C5D6009D8306 /* BurnerCollectionViewController.swift */,
+				EDA88F422412C8AC009D8306 /* BurnerCollectionViewCell.swift */,
+			);
+			path = BurnerCollectionViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,9 +401,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA88F3C2412C338009D8306 /* inzh.jpg in Resources */,
+				EDA88F392412C338009D8306 /* ggi.jpg in Resources */,
+				EDA88F3B2412C338009D8306 /* nast.jpg in Resources */,
+				EDA88F3D2412C338009D8306 /* dut.jpg in Resources */,
+				EDA88F3A2412C338009D8306 /* trubcol.jpg in Resources */,
 				040411F023FFDA6C00667F26 /* LaunchScreen.storyboard in Resources */,
 				0404121523FFF72400667F26 /* Icon-1024.png in Resources */,
 				ED8246122402AF3C00FB9D8A /* Hamburger-Menu.png in Resources */,
+				EDA88F3E2412C338009D8306 /* gkvd.jpg in Resources */,
 				040411ED23FFDA6C00667F26 /* Assets.xcassets in Resources */,
 				EDA579E2240C5D760059D638 /* phone.png in Resources */,
 				ED824614240303C600FB9D8A /* GNVM.JPG in Resources */,
@@ -432,6 +478,8 @@
 				ED2E4772240C56A3008A944A /* PopupPhonecallViewController.swift in Sources */,
 				ED63D94224104BA9007054DB /* UserProfileViewController.swift in Sources */,
 				0432550D240E4A7A00DA21F5 /* BurnerModel.swift in Sources */,
+				EDA88F402412C5D6009D8306 /* BurnerCollectionViewController.swift in Sources */,
+				EDA88F432412C8AC009D8306 /* BurnerCollectionViewCell.swift in Sources */,
 				EDA579E7240D852C0059D638 /* UserModel.swift in Sources */,
 				043BBFE3240F9CCD00C4A89A /* Alerts.swift in Sources */,
 				040411E623FFDA6A00667F26 /* AppDelegate.swift in Sources */,

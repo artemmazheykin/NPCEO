@@ -52,6 +52,49 @@ enum BurnerName{
     case gkvd, gnvm, gki, gks, gkst, gdk, gkdt, gkp, pg, pz, ggi, ggu, ggr, gins
 }
 
+class BurnerIdentifiers{
+    static let allTypes:[String] = [BurnerTypeName.gkvd.imageName,BurnerTypeName.nastil.imageName,BurnerTypeName.dut.imageName,BurnerTypeName.inzh.imageName,BurnerTypeName.ggi.imageName,BurnerTypeName.trubcol.imageName]
+    static let allTypeNames:[String] = [BurnerTypeName.gkvd.typeName,BurnerTypeName.nastil.typeName,BurnerTypeName.dut.typeName,BurnerTypeName.inzh.typeName,BurnerTypeName.ggi.typeName,BurnerTypeName.trubcol.typeName]
+}
+
+enum BurnerTypeName{
+    case gkvd, nastil, dut, inzh, ggi, trubcol
+    
+    var imageName:String{
+        switch self {
+        case .gkvd:
+            return "gkvd.jpg"
+        case .nastil:
+            return "nast.jpg"
+        case .dut:
+            return "dut.jpg"
+        case .inzh:
+            return "inzh.jpg"
+        case .ggi:
+            return "ggi.jpg"
+        case .trubcol:
+            return "trubcol.jpg"
+        }
+    }
+    
+    var typeName: String{
+        switch self {
+        case .gkvd:
+            return "Инжекционно-дутьевые горелки ГКВД"
+        case .nastil:
+        return "Настильные горелки"
+        case .dut:
+            return "Дутьевые горелки"
+        case .inzh:
+            return "Инжекционные горелки"
+        case .ggi:
+            return "Горелки с предварительным смешением"
+        case .trubcol:
+            return "Горелки с трубчатым коллектором"
+        }
+    }
+}
+
 class BurnerModel{
     
     private let burnerStandartCapacity: BurnerStandartCapacity

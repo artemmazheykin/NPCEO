@@ -5,9 +5,86 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Burner Collection View Controller-->
+        <scene sceneID="Of7-fC-YxX">
+            <objects>
+                <viewController storyboardIdentifier="BurnerCollectionViewController" id="b4L-OC-r0B" customClass="BurnerCollectionViewController" customModule="NPCEO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F0c-rW-9v7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="345-JZ-wuE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gaN-sR-vSp">
+                                    <size key="itemSize" width="180" height="240"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="BurnerCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="Vtv-kx-hEM" customClass="BurnerCollectionViewCell" customModule="NPCEO" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="240"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GoQ-Xg-HhP">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="240"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfZ-fE-wGs">
+                                                    <rect key="frame" x="10" y="173" width="160" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="otn-a0-yiv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ErE-BR-8wH">
+                                                    <rect key="frame" x="10" y="10" width="160" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ErE-BR-8wH" secondAttribute="height" multiplier="1:1" id="wNT-E6-mBx"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ErE-BR-8wH" firstAttribute="leading" secondItem="GoQ-Xg-HhP" secondAttribute="leading" constant="10" id="1Eb-uq-8qX"/>
+                                                <constraint firstItem="BfZ-fE-wGs" firstAttribute="width" secondItem="ErE-BR-8wH" secondAttribute="width" id="L8v-9R-90k"/>
+                                                <constraint firstItem="ErE-BR-8wH" firstAttribute="centerX" secondItem="GoQ-Xg-HhP" secondAttribute="centerX" id="l4G-K7-SIh"/>
+                                                <constraint firstItem="ErE-BR-8wH" firstAttribute="top" secondItem="GoQ-Xg-HhP" secondAttribute="top" constant="10" id="oXg-u8-iqG"/>
+                                                <constraint firstItem="BfZ-fE-wGs" firstAttribute="centerX" secondItem="GoQ-Xg-HhP" secondAttribute="centerX" id="oXx-Cf-XeA"/>
+                                                <constraint firstItem="BfZ-fE-wGs" firstAttribute="top" secondItem="ErE-BR-8wH" secondAttribute="bottom" constant="3" id="vzE-ra-YFd"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="240"/>
+                                        <connections>
+                                            <outlet property="burnerImageView" destination="ErE-BR-8wH" id="GoR-mJ-xOM"/>
+                                            <outlet property="burnerTypeName" destination="BfZ-fE-wGs" id="BH3-ym-nYb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="345-JZ-wuE" firstAttribute="bottom" secondItem="QMP-gn-9Mi" secondAttribute="bottom" id="on4-16-a9a"/>
+                            <constraint firstItem="345-JZ-wuE" firstAttribute="trailing" secondItem="QMP-gn-9Mi" secondAttribute="trailing" id="pyQ-4z-znK"/>
+                            <constraint firstItem="345-JZ-wuE" firstAttribute="top" secondItem="QMP-gn-9Mi" secondAttribute="top" id="r1N-28-OtB"/>
+                            <constraint firstItem="345-JZ-wuE" firstAttribute="leading" secondItem="QMP-gn-9Mi" secondAttribute="leading" id="uaP-3e-xQo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QMP-gn-9Mi"/>
+                    </view>
+                    <connections>
+                        <outlet property="burnerCollectionView" destination="345-JZ-wuE" id="HFr-wp-b9s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOo-o0-k4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="-657.12143928035982"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="vC4-Mh-3TA">
             <objects>
@@ -22,7 +99,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPE-El-WSL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-241" y="34"/>
+            <point key="canvasLocation" x="-92" y="34"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="PJC-Ea-ITD">
@@ -271,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gm2-Qf-s7C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1332" y="34"/>
         </scene>
         <!--Popup Phonecall View Controller-->
         <scene sceneID="30o-Nj-L8z">
@@ -311,7 +388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqo-zZ-oGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2450" y="34"/>
+            <point key="canvasLocation" x="1332" y="737"/>
         </scene>
         <!--User Profile View Controller-->
         <scene sceneID="mPM-42-H5Y">
@@ -412,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylJ-iY-NI1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1332" y="-657"/>
         </scene>
     </scenes>
     <resources>

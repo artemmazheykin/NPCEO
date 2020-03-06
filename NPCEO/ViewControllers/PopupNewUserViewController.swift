@@ -121,14 +121,7 @@ class PopupNewUserViewController: UIViewController {
                         Alerts.specialAlert(viewcontroller: self, title: "Alert", message: error.localizedDescription)
                     }
                     return
-                }
-                
-                print("authResult = \(authResult)")
-                //The email address is badly formatted.
-                //The password must be 6 characters long or more.
-                //The email address is already in use by another account.
-                
-                
+                }                
                 
                 if let id = authResult?.user.uid{
                     tempUid = id

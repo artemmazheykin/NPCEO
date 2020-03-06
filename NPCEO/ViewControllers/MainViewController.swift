@@ -40,22 +40,13 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
     var webView: WKWebView!
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 44))
 
-    let image1:[UIImage] = [UIImage(named: "Icon-1024")!, UIImage(named: "internetIcon.jpeg")!]
+    let image1:[UIImage] = [UIImage(named: "gkvd.jpg")!, UIImage(named: "Icon-1024")!, UIImage(named: "internetIcon.jpeg")!]
     var burgerButtonDidTappedIsTapped: Bool = false
     var frostedSidebar: FrostedSidebar!
     var tappedBurgerIndex:Int = 0
     @IBOutlet weak var okSigninButton: UIButton!
     @IBOutlet weak var newUserButton: UIButton!
-        
-    
-    //    override func loadView() {
-    //        let webConfiguration = WKWebViewConfiguration()
-    //        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-    //        webView.uiDelegate = self
-    //        view = webView
-    //    }
-    
-    
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
@@ -289,39 +280,20 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
         burgerButton.isHidden = false
         burgerButtonDidTappedIsTapped = false
         frostedSidebar.dismissAnimated(true) { (result) in
-            if self.tappedBurgerIndex != index{
-                self.tappedBurgerIndex = index
-                switch index {
-                case 0:
-                    self.navigationItem.title = "НПЦЭО"
-                    for view in self.view.subviews{
-                        if view.tag == 1{
-                            view.removeFromSuperview()
-                        }
+            self.tappedBurgerIndex = index
+            switch index {
+            case 0:
+                let infovc = self.storyboard!.instantiateViewController(withIdentifier: "BurnerCollectionViewController")
+                self.navigationController?.pushViewController(infovc, animated: true)
+            case 1:
+                self.navigationItem.title = "НПЦЭО"
+                for view in self.view.subviews{
+                    if view.tag == 1{
+                        view.removeFromSuperview()
                     }
-                case 1:
-                    for view in self.view.subviews{
-                        if view.tag == 1{
-                            view.removeFromSuperview()
-                        }
-                    }
-                    self.navigationItem.title = "сайт организации"
-                    let webConfiguration = WKWebViewConfiguration()
-                    self.webView = WKWebView(frame: self.view.frame, configuration: webConfiguration)
-                    self.webView.tag = index
-                    self.webView.uiDelegate = self
-                    self.view.addSubview(self.webView)
-                    print("number of views = \(self.view.subviews.count)")
-                    for (i,view) in self.view.subviews.enumerated(){
-                        print("view #\(i): \(view.tag)")
-                    }
-                    let myURL = URL(string:"http://npceo.ru")
-                    let myRequest = URLRequest(url: myURL!)
-                    self.webView.load(myRequest)
-                    
-                default:
-                    break
                 }
+            default:
+                break
             }
         }
         
