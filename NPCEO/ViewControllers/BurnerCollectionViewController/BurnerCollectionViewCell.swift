@@ -12,6 +12,7 @@ class BurnerCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var burnerImageView: UIImageView!
     @IBOutlet weak var burnerTypeName: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     
 }

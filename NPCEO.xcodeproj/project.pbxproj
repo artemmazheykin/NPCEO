@@ -246,9 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				ED45FBC12400522800C63446 /* MainViewController.swift */,
-				EDA88F412412C883009D8306 /* BurnerCollectionViewController */,
 				0480FE34240918BE00595875 /* PopupNewUserViewController.swift */,
 				ED2E4771240C56A3008A944A /* PopupPhonecallViewController.swift */,
+				EDA88F412412C883009D8306 /* BurnerCollectionViewController */,
 				04C84BEC2411283D00A216AB /* UserInfoViewController */,
 			);
 			path = ViewControllers;

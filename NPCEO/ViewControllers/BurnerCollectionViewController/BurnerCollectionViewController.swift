@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class BurnerCollectionViewController: UIViewController {
 
     @IBOutlet weak var burnerCollectionView: UICollectionView!
     var burnerTypesMas: [BurnerTypeName] = [.gkvd,.nastil,.dut,.inzh,.ggi,.trubcol]
-    
+    let storage = Storage.storage()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +51,22 @@ extension BurnerCollectionViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BurnerCollectionViewCell", for: indexPath) as! BurnerCollectionViewCell
-        cell.burnerImageView.image = UIImage(named: burnerTypesMas[indexPath.item].imageName)
+        
+        let storageRef = storage.reference()
+        let spaceRef = storageRef.child("images/typesOfBurner/\(indexPath.item+1).png")
+        Spinners.spinnerStart(spinner: cell.spinner)
+        spaceRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+          if let err = error {
+            print("Can't load image \(spaceRef.fullPath), error = \(err.localizedDescription)")
+            Spinners.spinnerStop(spinner: cell.spinner)
+            // Uh-oh, an error occurred!
+          } else {
+            // Data for "images/island.jpg" is returned
+            let image = UIImage(data: data!)
+            Spinners.spinnerStop(spinner: cell.spinner)
+            cell.burnerImageView.image = image
+          }
+        }
         cell.burnerTypeName.text = burnerTypesMas[indexPath.item].typeName
         
         return cell

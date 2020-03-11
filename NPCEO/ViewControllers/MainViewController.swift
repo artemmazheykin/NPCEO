@@ -18,6 +18,7 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
     //    authUI.delegate = self
     
     var ref: DatabaseReference!
+    
     var handle: AuthStateDidChangeListenerHandle!
     @IBOutlet weak var signInView: UIView!
     @IBOutlet weak var emailTextfield: UITextField!
