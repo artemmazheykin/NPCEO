@@ -13,11 +13,12 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var fabric: Fabric!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        fabric = FabricImpl()
         
         // Override point for customization after application launch.
         // Sets background to a blank/empty image

@@ -24,6 +24,7 @@ class MainViewController: UIViewController, WKUIDelegate, FrostedSidebarDelegate
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    var navigator: Navigator!
     
     let burgerButton = UIButton()
     let userInformationButton = UIButton()

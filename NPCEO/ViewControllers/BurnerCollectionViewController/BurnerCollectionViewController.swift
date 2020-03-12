@@ -55,19 +55,27 @@ extension BurnerCollectionViewController: UICollectionViewDataSource{
         let storageRef = storage.reference()
         let spaceRef = storageRef.child("images/typesOfBurner/\(indexPath.item+1).png")
         Spinners.spinnerStart(spinner: cell.spinner)
-        spaceRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-          if let err = error {
-            print("Can't load image \(spaceRef.fullPath), error = \(err.localizedDescription)")
+        let typeName = burnerTypesMas[indexPath.item].typeName
+        
+        if let savedImage = RealtimeDatabase.shared.burnerTypesImages[typeName]{
+            cell.burnerImageView.image = savedImage
             Spinners.spinnerStop(spinner: cell.spinner)
-            // Uh-oh, an error occurred!
-          } else {
-            // Data for "images/island.jpg" is returned
-            let image = UIImage(data: data!)
-            Spinners.spinnerStop(spinner: cell.spinner)
-            cell.burnerImageView.image = image
-          }
+        }else{
+            spaceRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                if let err = error {
+                    print("Can't load image \(spaceRef.fullPath), error = \(err.localizedDescription)")
+                    Spinners.spinnerStop(spinner: cell.spinner)
+                    // Uh-oh, an error occurred!
+                } else {
+                    // Data for "images/island.jpg" is returned
+                    let image = UIImage(data: data!)
+                    Spinners.spinnerStop(spinner: cell.spinner)
+                    cell.burnerImageView.image = image
+                    RealtimeDatabase.shared.burnerTypesImages[typeName] = image
+                }
+            }
         }
-        cell.burnerTypeName.text = burnerTypesMas[indexPath.item].typeName
+        cell.burnerTypeName.text = typeName
         
         return cell
     }

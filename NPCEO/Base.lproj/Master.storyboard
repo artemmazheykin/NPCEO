@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="BurnerCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="Vtv-kx-hEM" customClass="BurnerCollectionViewCell" customModule="NPCEO" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="BurnerCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="Vtv-kx-hEM" customClass="BurnerCollectionViewCell" customModule="NPCEO" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GoQ-Xg-HhP">
@@ -94,7 +94,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vC4-Mh-3TA">
             <objects>
-                <navigationController id="0uE-Jn-2Mb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" id="0uE-Jn-2Mb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8AW-Nm-90l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -214,7 +214,7 @@
         <!--Popup New User View Controller-->
         <scene sceneID="hr2-tD-ZIH">
             <objects>
-                <viewController storyboardIdentifier="popupNewUser" id="CnX-Ey-1EQ" customClass="PopupNewUserViewController" customModule="NPCEO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopupNewUser" id="CnX-Ey-1EQ" customClass="PopupNewUserViewController" customModule="NPCEO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7pw-9f-6qu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,7 +359,7 @@
         <!--Popup Phonecall View Controller-->
         <scene sceneID="30o-Nj-L8z">
             <objects>
-                <viewController storyboardIdentifier="popupPhoneCall" id="jJ6-ny-dS9" customClass="PopupPhonecallViewController" customModule="NPCEO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopupPhoneCall" id="jJ6-ny-dS9" customClass="PopupPhonecallViewController" customModule="NPCEO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BxJ-JJ-tI5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
