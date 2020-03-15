@@ -263,14 +263,38 @@
 		ED05E902241AD1C500CB2177 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
-				ED05E903241AD25100CB2177 /* FabricImpl.swift */,
+				ED1D52EB241E3C6600C33AF5 /* fabric */,
+				ED1D52EC241E3C7E00C33AF5 /* navigator */,
+				ED1D52ED241E3C9000C33AF5 /* router */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		ED1D52EB241E3C6600C33AF5 /* fabric */ = {
+			isa = PBXGroup;
+			children = (
 				EDA84DF6241AE49500419DC7 /* Fabric.swift */,
+				ED05E903241AD25100CB2177 /* FabricImpl.swift */,
+			);
+			path = fabric;
+			sourceTree = "<group>";
+		};
+		ED1D52EC241E3C7E00C33AF5 /* navigator */ = {
+			isa = PBXGroup;
+			children = (
 				ED05E907241ADD4C00CB2177 /* NavigatorImpl.swift */,
 				ED05E909241ADDC800CB2177 /* Navigator.swift */,
+			);
+			path = navigator;
+			sourceTree = "<group>";
+		};
+		ED1D52ED241E3C9000C33AF5 /* router */ = {
+			isa = PBXGroup;
+			children = (
 				EDA84DF8241AE93900419DC7 /* Router.swift */,
 				EDA84DFA241AE98A00419DC7 /* RouterImpl.swift */,
 			);
-			path = Architecture;
+			path = router;
 			sourceTree = "<group>";
 		};
 		EDA579E3240D83CC0059D638 /* ViewControllers */ = {
